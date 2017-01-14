@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+	<title>换换圈</title>	
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/zepto.min.js"></script>
+	<script src="js/swiper.jquery.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script>
+        function resize(originSize,type){
+	        	var type=type||"x";
+	        	var widths=document.documentElement.clientWidth;
+	        	var heights=document.documentElement.clientHeight;
+	        	if(type=="x"){
+	        	    var scale=widths/originSize*100+"px";
+	        	}else{
+	        		var scale=heights/originSize*100+"px";
+	        	}
+	        	document.getElementsByTagName("html")[0].style.fontSize=scale;
+	    }
+	    window.onload=function(){
+	        resize(649);
+        }
+    </script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide one">
+        	<div class="img1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s">
+        		<img src="img/00.png" alt="" />
+        	</div>
+        	<div class="img2 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+        		<img src="img/01.png" alt="" />
+        	</div>
+        	<div class="img3 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+        		<img src="img/02.png" alt="" />
+        	</div>
+        	<div class="img4 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+        		<img src="img/03.png" alt="" />
+        	</div>
+        	<div class="img5 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+        		<img src="img/04.png" alt="" />
+        	</div>
+        	<div class="xqqz ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">兴趣圈子</div>
+        	<div class="title1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.4s">换换圈,圈里更好玩</div>
+        </div>
+        <div class="swiper-slide two">
+        	<div class="img1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s">
+        		<img src="img/11.png" alt="" />
+        	</div>
+        	<div class="img2 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+        		<img src="img/13.png" alt="" />
+        	</div>
+        	<div class="img3 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+        		<img src="img/12.png" alt="" />
+        	</div>
+        	<div class="xqqz ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">好友验证</div>
+        	<div class="title1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.4s">朋友都说TA靠谱</div>
+        </div>
+        <div class="swiper-slide three">
+        	<div class="img1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s">
+        		<img src="img/21.png" alt="" />
+        	</div>
+        	<div class="img2 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+        		<img src="img/23.png" alt="" />
+        	</div>
+        	<div class="img3 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+        		<img src="img/22.png" alt="" />
+        	</div>
+        	<div class="xqqz ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">专业验机</div>
+        	<div class="title1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.4s">买的放心卖的快</div>
+            <div class="come ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s">开启换换</div>
+        </div>
+    </div>	
+    <div class="swiper-pagination lunbo"></div>
+</div>
+</body>
+<script>
+    var swiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',  /*分页器*/
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+           swiperAnimateCache(swiper); //隐藏动画元素 
+           swiperAnimate(swiper); //初始化完成开始动画
+        }, 
+        onSlideChangeEnd: function(swiper){ 
+           swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        } 
+    })
+</script>
+</html>

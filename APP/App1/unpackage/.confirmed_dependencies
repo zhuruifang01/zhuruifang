@@ -1,0 +1,23 @@
+{
+	"index.html": {
+		"resources": [
+			"img/02.png",
+			"css/index.css",
+			"css/animate.css",
+			"css/swiper.min.css",
+			"img/00.png",
+			"img/03.png",
+			"img/01.png",
+			"js/swiper.jquery.js",
+			"js/swiper.animate1.0.2.min.js",
+			"js/zepto.min.js",
+			"img/04.png",
+			"img/12.png",
+			"img/23.png",
+			"img/13.png",
+			"img/11.png",
+			"img/21.png",
+			"img/22.png"
+		]
+	}
+}

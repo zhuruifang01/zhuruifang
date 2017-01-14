@@ -1,0 +1,92 @@
+html,body{
+    margin:0;padding:0;
+    width:100%;height:100%;
+}
+.scene{
+    width:100%;height:100%;
+    position:relative;
+    perspective:500px;
+}
+.scene .room{
+    width:100%;height:100%;
+    position: absolute;
+    left:0;top:0;
+    transform-style:preserve-3d;
+    /*transition:transform 2s ease;*/
+    /*transform:translateZ(-500px) rotate3d(0,1,0,180deg);*/
+}
+.scene .room .panel{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;top:0;
+    backface-visibility:visible;
+}
+.scene .room .panel:nth-child(1){ /*顶*/
+    background:url(../img/ceil1.jpg);
+    background-size:100% 100%;
+    transform-origin:top;
+    transform:rotateX(90deg);
+}
+.scene .room .panel:nth-child(2){/*左*/
+    background: #e5e5e5;
+    box-shadow: 0 0 200px #999 inset;
+    transform-origin:left;
+    transform:rotateY(-90deg);
+}
+.scene .room .panel:nth-child(3){/*后*/
+    background:url(../img/window.gif) no-repeat center;
+    background-size:100% 100%;
+    text-align:center;
+}
+.scene .room .panel:nth-child(3) a{
+    font-size:78px;
+    color:#FF8C1C;
+    font-family:"微软雅黑";
+    font-weight:bold;
+    line-height:500px;
+}
+.scene .room .panel:nth-child(3) a:hover{color:blue;}
+.scene .room .panel:nth-child(4){/*右*/
+    background: #e5e5e5;
+    box-shadow: 0 0 200px #999 inset;
+    transform-origin:right;
+    transform:rotateY(90deg);
+}
+.scene .room .panel:nth-child(5){ /*下*/
+    background:url(../img/floor.jpg);
+    transform-origin:bottom;
+    transform:rotateX(-90deg);
+}
+.scene .room .panel:nth-child(6){ /*前*/
+    background:url(../img/1.jpg) no-repeat;
+    background-size:100% 100%;
+    text-align:center;
+    position:relative;
+}
+img{
+    position:absolute;
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+    width:120px;
+}
+.left,.right{
+    width:80%;
+    height:100px;
+    margin:0 auto;
+    margin-top:160px;
+}
+.left div,.right div{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    color: red;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0px 50px 0 50px;
+    border-radius: 15px;
+    transform: rotateY(180deg);
+}

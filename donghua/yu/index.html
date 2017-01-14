@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>糖果雨</title>
+	<style>
+       html,body{
+       	 width:100%;
+       	 height:100%;
+       	 background:url(img/bg.jpg);
+       }
+	</style>
+	<script>
+	   var clientW=document.documentElement.clientWidth;
+	   var clientH=document.documentElement.clientHeight;
+	   var arr=[];
+	   window.onload=function(){
+	   	// 创建200个随机位置的div
+		   	  for(var i=0;i<100;i++){
+		   	  	 var div=document.createElement("div");
+	             div.style.cssText="width:50px;height:50px;position:absolute;left:"+(50+Math.random()*(clientW-100))+"px;top:10px;transition:transform 1s ease "+(1+3*Math.random())+"s";
+	            
+	             document.body.appendChild(div);
+	             arr.push(div);
+	          
+	             div.style.background="url(img/"+(parseInt(Math.random()*20))+".png) no-repeat center center";
+	             div.style.backgroundSize="50px 50px";
+	             
+		   	  }
+		//雨滴下落 //setTimeout(function(){},0);时间到了就执行函数体
+		   	  setTimeout(function(){
+		   	  	 for(var i=0;i<arr.length;i++){
+		   	  	 	 arr[i].style.transform="translate(0,"+clientH+"px)";  //向下平移
+		   	  	// 监听动画完成之后执行函数
+                     arr[i].addEventListener("webkitTransitionEnd",function(){
+                         var that=this;
+                         this.style.transition="none"; //清除动画
+                         this.style.transform="translate(0,0)"; //恢复原位置
+                         setTimeout(function(){
+                         	that.style.transition="transform 4s ease "+(1+3*Math.random())+"s";
+                         	that.style.transform="translate(0,"+clientH+"px)";
+
+                         },0);
+		   	  	 	 });
+		   	  	 }
+		   	  },0);
+     }
+	</script>
+</head>
+<body>
+</body>
+</html>

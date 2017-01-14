@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D轮播</title>
+	<style>
+	   body,html{
+	   	 width:100%;height:100%;
+	   	 background:url(bg.jpg);
+	   	 background-size:100% 100%;
+	   }
+	   *{box-sizing:border-box;}
+       .boxs{
+        	width:550px;height:412px;
+        	position:absolute;
+        	left:0;right:0;
+        	top:0;bottom:0;
+        	margin:auto;
+        	/*border:1px solid black;*/
+            perspective:800px;
+            perspective-origin:bottom;
+        }
+	</style>
+  <script src="jquery-3.1.0.js"></script>
+	<script>
+        window.onload=function(){
+        	var boxs=document.querySelector(".boxs");
+           // 获取盒子样式的宽高
+        	var widths=parseInt(getComputedStyle(boxs,null).width);
+        	var heights=parseInt(getComputedStyle(boxs,null).height);
+        	var nums=6;
+        	var arr=[];
+        	// 创建nums个场景(分为nums份)
+        	for(var i=0;i<nums;i++){
+               var scene=document.createElement("div");
+               scene.style.cssText="width:100%;height:"+heights/nums+"px;position:absolute;left:0;top:"+(i*(heights/nums))+"px;";
+               boxs.appendChild(scene);
+               //每个场景创建一个盒子
+               var box=document.createElement("div");
+               box.style.cssText="width:100%;height:100%;position:absolute;left:0;top:0;transform-style:preserve-3d;transition:transform 2s ease "+i*0.3+"s;transform-origin:center center -400px;";
+               scene.appendChild(box);
+               arr.push(box);
+               // 每个盒子创建6个面
+               for(var j=0;j<6;j++){
+               	  var panel=document.createElement("div");
+               	  panel.style.cssText="position:absolute;left:0;top:0;";
+               	  if(j==0){ //上
+               	  	 panel.style.width=widths+"px";
+               	  	 panel.style.height=widths+"px";
+               	  	 panel.style.transformOrigin="top";
+               	  	 panel.style.transform="rotateX(-90deg)";
+               	  }else if(j==1){ //左
+                     panel.style.width=widths+"px";
+                     panel.style.height=heights/nums+"px";
+                     panel.style.transformOrigin="left";
+                     panel.style.transform="rotateY(90deg)";
+                     panel.style.background="url(s1.jpg) no-repeat 0 "+(-i*(heights/nums))+"px";
+               	  } else if(j==2){ //后
+                     panel.style.width=widths+"px";
+                     panel.style.height=heights/nums+"px";
+                     panel.style.background="url(s5.jpg) no-repeat 0 "+(-i*(heights/nums))+"px";
+               	  } else if(j==3){ //右
+                     panel.style.width=widths+"px";
+                     panel.style.height=heights/nums+"px";
+                     panel.style.transformOrigin="right";
+                     panel.style.transform="rotateY(-90deg)";
+                     panel.style.background="url(s3.jpg) no-repeat 0 "+(-i*(heights/nums))+"px";
+               	  }else if(j==4){ //下
+                     panel.style.width=widths+"px";
+               	  	 panel.style.height=widths+"px";
+               	  	 panel.style.top=widths-heights/nums+"px";
+               	  	 panel.style.transformOrigin="bottom";
+               	  	 panel.style.transform="rotateX(90deg)";
+               	  } else if(j==5){ //前
+                     panel.style.width=widths+"px";
+                     panel.style.height=heights/nums+"px";
+                     panel.style.transform="translateZ(-550px)";
+                     panel.style.background="url(s4.jpg) no-repeat 0 "+(-i*(heights/nums))+"px";
+               	  }
+
+               	  box.appendChild(panel);
+               }
+             }
+          // 自动轮播  
+            var init=0;
+            var t1=setInterval(function(){
+               	  init+=90;
+	                for(var i=0;i<arr.length;i++){
+	                	arr[i].style.transform="rotateY("+init+"deg)";
+	                }
+        	  },4000);
+
+          //关闭屏幕轮播停止 打开继续
+              $(window).focus(function(){
+                  t1=setInterval(function(){
+                    init+=90;
+                    for(var i=0;i<arr.length;i++){
+                      arr[i].style.transform="rotateY("+init+"deg)";
+                    }
+                  },3000);
+              });
+              $(window).blur(function(){
+                clearInterval(t1);
+              });
+
+        }
+  </script>
+</head>
+<body>
+	<div class="boxs">
+	</div>
+</body>
+</html>

@@ -1,0 +1,420 @@
+body,ul,li,a,img,div{
+   padding:0;
+   margin:0;
+   text-decoration:none;
+   list-style:none;
+   font-family:"微软雅黑";
+}
+header{
+	width:100%;
+	height:44px;
+	background-color:#000;
+}
+.large{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	padding-left:100px;
+	padding-right:100px;
+	text-align:center;
+	display:none;
+}
+.large .title{
+	width:10%;
+	height:44px;
+	float: left;
+	text-align:center;
+}
+.small{
+	width:100%;
+	height:44px;
+    }
+.small .option{
+   float: left;
+}
+.small .option a{display:block;height:44px;}
+.small .option a img{height:44px;}
+.small .menu{
+	width:10%;
+	line-height:44px;
+	text-align:left;
+	padding-left:10px;	
+}
+.small .menu a{color:white;}
+.small .son{
+	width:200px;
+	background-color:#000;
+	padding-left:20px;
+	position:absolute;
+	left:0;
+	display:none;
+	z-index:9999;
+}
+.small .son a{
+	display:block;
+	padding:10px 10px;
+	line-height:30px;
+	border-bottom:1px solid #333;}
+.small .son a:last-child{
+	border-bottom:1px solid ;
+}
+.small .logo{
+	width:80%;
+    text-align:center;
+}
+.small .bag{
+	width:10%;
+	text-align:right;
+	padding-right:10px;
+}
+
+ /*轮播图*/
+ .wheel{
+ 	width:100%;
+ 	height:350px;
+ 	margin:0 auto;
+ 	position:relative;
+ 	overflow:hidden;
+ }
+ .imgbox{
+ 	width:100%;
+ 	height:100%;
+ 	position:relative;
+ }
+ .imgbox .list{
+ 	width:100%;
+ 	height:100%;
+ 	position:absolute;
+ }
+ .imgbox .one{
+ 	background:#fff url(../img/banner1_s.jpg);
+ 	background-repeat:no-repeat;
+ 	background-size:contain;
+ 	background-position:center bottom;
+ }
+ .imgbox .two{
+	  background:black url(../img/banner2.jpg);
+	  background-repeat:no-repeat;
+	  background-position:center;
+      background-size:contain;
+      left:100%;
+	 }
+ .imgbox .three{
+ 	background:url(../img/banner3_s.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center 70%;
+    left:100%;
+ }
+ .btns{
+ 	 width:170px;height:8px;
+ 	 position:absolute;
+ 	 left:0;right:0;bottom:50px;
+ 	 margin:auto;
+ 	 z-index:999;
+ 	}
+ .btns .btns-list{
+ 	float: left;
+ 	width:50px; height:100%;
+ 	margin-right:10px;
+ 	border:1px solid #ccc;
+    position:relative;
+ }
+ .btns .btns-list:last-child{margin:0;}
+ .btns .progress{
+ 	height:100%;background:white;width:0%;
+ }
+ .left{
+ 	width:25%;height:100%;
+ 	position:absolute;
+ 	left:0;top:0;
+ 	margin:auto;
+ 	z-index:100;
+ }
+.right{
+	width:25%;height:100%;
+	position:absolute;
+	right:0;top:0;
+	margin:auto;
+	z-index:100;
+}
+.leftbtn,.rightbtn{
+   width:64px;height:64px;
+   background:#242424;
+   text-align:center;
+   line-height:64px;
+   color:#ccc;
+   font-size:35px;
+   border-radius:50%;
+}
+.leftbtn{
+	position: absolute;
+	top:0;bottom:0;
+	left:20px;
+	margin:auto;
+	opacity:0;
+	transition:opacity .5s linear;
+}
+.rightbtn{
+	position:absolute;
+	top:0;bottom:0;
+	right:20px;
+    margin:auto;
+    opacity:0;
+    transition:opacity .5s linear;
+}
+.left:hover >.leftbtn{opacity:1;}
+.right:hover >.rightbtn{opacity:1;}
+/*产品*/
+   div[class*=col]{
+    height:200px;border:2px solid white;
+   }
+   .container .row div a{
+   	 display:block;
+   	 width:100%;height:100%;
+   }
+   .col1{
+   	 background:url(../img/accessibility_small.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col2{
+     background:url(../img/airpods_small.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col3{
+     background:url(../img/apple_tv_small.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col4{
+     background:url(../img/nike_watch_small.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+/*底部*/
+ .footer{
+  width:100%;
+  height:435px;
+  margin:0 auto;
+  background-color:#F2F2F2;
+  display:none;
+ }
+ .foot_content{
+  width:80%;
+  margin:0 auto;
+  height:280px;
+  margin:0 auto;
+ }
+ .foot_content div{
+  width:20%;
+  height:100%;
+  float: left;
+ }
+ .footer p{
+  font-size:12px;
+  line-height:1;
+  color:#666666;
+  font-weight:bold;
+  margin-top:20px;
+ }
+ .foot_content div a p{
+    margin-top:0;
+  font-weight:normal;
+ }
+ .foot_content div a p:hover{
+  text-decoration:underline;
+ }
+ .footer .more,.footer .end{
+    width:80%;
+    height:40px;
+    margin:0 auto;
+    border-bottom:1px solid #666;
+}
+ .footer .more p,.footer .end p{
+  line-height:40px; 
+  font-weight:normal;
+ }
+ .footer .more p a{
+  color:blue;
+ }
+ .footer .more p a:hover{
+  color:#666;
+  text-decoration:underline;
+ } 
+ .footer .end{
+  border:0;
+  position:relative;
+ }
+ .footer .end p{
+  line-height:10px;
+  float: left;
+ }
+ .footer .end p a{
+  padding:5px;
+  color:#666;
+ }
+ .footer .end p a:hover{
+  text-decoration:underline;
+ }
+ .footer .US{padding-left:50px;}
+ .footsmall{
+    display:block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    background:#F2F2F2;
+    display:block;
+ }
+ .footsmall .foot1{
+     width:95%;
+     height:auto;
+     overflow:hidden;
+     margin:0 auto;
+     
+ }
+ .footsmall .foot1 .footpar{
+     width:100%;
+     height:46px;
+     line-height:46px;
+     font-size:14px;
+     border-bottom:1px solid #E3E3E3;
+     color:#333;
+     overflow:hidden;
+ }
+ .footsmall .foot1 .footpar div{
+    width:50%;
+    float: left;
+ }
+ .footsmall .foot1 .footleft{
+    text-align:left;
+ }
+ .footsmall .foot1 .footright{
+    text-align:right;
+    display:block;
+ }
+ .footsmall .foot1 .footright1{
+    display:block;
+ }
+ .footsmall .foot1 .footright2{
+   display:none;
+ }
+ .foot1 .footson{
+    width:95%;
+    margin:0 auto;
+    display:none;
+ }
+ .foot1 .footson a{
+    font-size:10px;
+    color:#333;
+    line-height:30px;
+ }
+ .foot1 .footson a:hover{
+   text-decoration:underline;
+ }
+ .foot2{
+   padding-top:10px;
+   font-size:10px;
+   line-height:25px;
+   color:#999;
+ }
+ .foot2 a{
+   color:blue;
+ }
+ .foot2 a:hover,.foot3 a:hover{
+   color:#333;
+   text-decoration:underline;
+ }
+ .foot3{
+   font-size:10px;
+   line-height:25px;
+ }
+ .foot3 a{
+   color:#333;
+ }
+/*响应式*/
+/*中屏*/
+ @media screen and (min-width: 735px){
+ 	/*导航*/
+ 	.large{display:block;}
+ 	.small{display:none;width:100%;}
+ 	/*轮播*/
+ 	.wheel{height:420px;}
+ 	.imgbox .one{
+ 	 background:white url(../img/banner1_m.jpg);
+ 	 background-repeat:no-repeat;
+     background-size:contain;
+     background-position:center bottom;
+	 }
+	.imgbox .three{
+	 	background:black url(../img/banner3_m.jpg);
+	 	background-repeat:no-repeat;
+	    background-size:cover;
+	 	background-position:center 70%;
+	 }
+	/*产品*/
+	.col1{
+   	 background:url(../img/accessibility_medium.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col2{
+     background:url(../img/airpods_medium.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col3{
+     background:url(../img/apple_tv_medium.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col4{
+     background:url(../img/nike_watch_medium.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   
+ }
+ @media screen and (min-width: 762px){
+   .footer{display:block;}
+   .footsmall{display:none;}
+ }
+/*大屏*/
+ @media screen and (min-width: 1075px){
+ 	/*轮播*/
+ 	.wheel{height:580px;}
+ 	.imgbox .one{
+ 	   background:#fff url(../img/banner1_l.jpg);
+ 	   background-repeat:no-repeat;
+ 	   background-size:contain;
+ 	   background-position:center bottom;
+	 }
+	.imgbox .three{
+	 	background:black url(../img/banner3_l.jpg);
+	 	background-repeat:no-repeat;
+        background-position:center;
+        background-size:cower;
+	 }
+	/*产品*/
+	.col1{
+   	 background:url(../img/accessibility_large.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col2{
+     background:url(../img/airpods_large.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col3{
+     background:url(../img/apple_tv_large.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+   .col4{
+     background:url(../img/nike_watch_large.jpg);
+   	 background-repeat:no-repeat;
+   	 background-position:center;
+   }
+ }

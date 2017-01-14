@@ -1,0 +1,33 @@
+{
+	"index.html": {
+		"resources": [
+			"img/ban4.jpg",
+			"js/swiper.jquery.js",
+			"fonts/mui.ttf",
+			"img/ban5.jpg",
+			"img/ban3.jpg",
+			"css/index.css",
+			"img/ban2.jpg",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"img/ban1.jpg",
+			"js/index.js",
+			"img/n1.jpg",
+			"img/n5.jpg",
+			"img/n2.jpg",
+			"img/n6.jpg",
+			"img/n4.jpg",
+			"img/n3.jpg",
+			"fonts/iconfont.js",
+			"fonts/iconfont.woff",
+			"fonts/iconfont.css",
+			"img/c2.jpg",
+			"img/c1.jpg",
+			"css/index0.css",
+			"css/iscroll.css",
+			"js/iscroll.js"
+		]
+	}
+}

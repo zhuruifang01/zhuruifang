@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>首页</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <link rel="stylesheet" href="css/iscroll.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <script src="js/swiper.jquery.js"></script>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script src="fonts/iconfont.js"></script>
+    <link rel="stylesheet" href="css/index0.css" />
+    <script src="js/index.js"></script>
+    <script>	
+	        function resize(originSize,type){
+		        	var type=type||"x"; 
+		        	var widths=document.documentElement.clientWidth;
+		        	var heights=document.documentElement.clientHeight;
+		        	if(type=="x"){
+		        	    var scale=widths/originSize*100+"px";
+		        	}else{
+		        		var scale=heights/originSize*100+"px";
+		        	}
+		        	document.getElementsByTagName("html")[0].style.fontSize=scale;
+		    }
+		    window.onload=function(){
+		        resize(542);
+	        }
+    </script> 
+    <style>
+    	.up,.down{
+    		display:none;
+    		text-align:center;
+    	}
+    </style>
+</head>
+<body>
+<div id="header">
+	  <div class="title">
+	        <a class="logo">礼物说</a>
+	        <input id="search" type="text" value="搜索单品、攻略"/>
+	        <div class="swiper-container swiper-container1">
+                    <div class="swiper-wrapper swiper-wrapper1">  
+				         <div class="swiper-slide"><a href="##" class="active">精选</a></div>
+				         <div class="swiper-slide"><a href="##">送男票</a></div>
+				         <div class="swiper-slide"><a href="##">穿搭</a></div>
+				         <div class="swiper-slide"><a href="##">海淘</a></div>
+				         <div class="swiper-slide"><a href="##">礼物</a></div>
+				         <div class="swiper-slide"><a href="##">美物</a></div>
+				         <div class="swiper-slide"><a href="##">美护</a></div>
+				         <div class="swiper-slide"><a href="##">送闺蜜</a></div>
+				         <div class="swiper-slide"><a href="##">送爸妈</a></div>
+				         <div class="swiper-slide"><a href="##">送同事</a></div>
+				         <div class="swiper-slide"><a href="##">创意生活</a></div>
+				         <div class="swiper-slide"><a href="##">设计感</a></div>
+				         <div class="swiper-slide"><a href="##">文艺风</a></div>
+				         <div class="swiper-slide"><a href="##">科技范</a></div>
+				         <div class="swiper-slide"><a href="##">爱读书</a></div>
+				         <div class="swiper-slide"><a href="##">奇葩搞怪</a></div>
+				         <div class="swiper-slide"><a href="##">萌萌哒</a></div>
+                    </div>
+                </div>
+	  </div>
+</div>
+
+<div id="wrapper">
+	<div id="scroller">
+		<div class="up">
+			<img src="img/x3.jpg" alt="" />
+		</div>
+		<ul>
+			<li class="lunbo"> 
+				<!--轮播图-->
+		        <div class="swiper-container swiper-container2">
+		           <div class="swiper-wrapper swiper-wrapper2">
+			           <div class="swiper-slide"><img src="img/ban1.jpg" alt="" /></div>
+			           <div class="swiper-slide"><img src="img/ban2.jpg" alt="" /></div>
+			           <div class="swiper-slide"><img src="img/ban3.jpg" alt="" /></div>
+			           <div class="swiper-slide"><img src="img/ban4.jpg" alt="" /></div>
+			           <div class="swiper-slide"><img src="img/ban5.jpg" alt="" /></div>
+		           </div>
+		           <div class="swiper-pagination"></div>
+		        </div>
+		    </li>
+		    <li>
+		    	<!--分类-->
+		    	<div class="fenglei">
+		             <div class="con"><a href="liebiaoye.html"><img src="img/n1.jpg" alt="" /></a></div>
+		             <div class="con"><a href="liebiaoye.html"><img src="img/n2.jpg" alt="" /></a></div>
+		             <div class="con con1"><a href="liebiaoye.html"><img src="img/n3.jpg" alt="" /></a></div>
+		             <div class="con con2"><a href="liebiaoye.html"><img src="img/n4.jpg" alt="" /></a></div>
+		             <div class="con con2"><a href="liebiaoye.html"><img src="img/n5.jpg" alt="" /></a></div>
+		             <div class="con con1 con2"><a href="liebiaoye.html"><img src="img/n6.jpg" alt="" /></a></div>
+                 </div>  
+		    </li>
+		    <li>
+		    	<!--内容-->
+			    <a href="">
+				    <div class="contect">
+					        <div class="header">
+					        	<img src="img/c1.jpg" alt="" />
+					        	<div class="til1">淘局长</div> 
+					        	<div class="til2">海淘界的买手大人,轻松码住第一手时尚海外</div>
+					        </div>
+					        <div class="img">
+					        	<img src="img/c2.jpg" alt="" />
+					        </div>
+					        <div class="title">
+					        	第58期|送给懒癌宝宝的自救生活神器,拿走不谢
+					        </div>
+					        <div class="conn">
+					        	懒癌晚期病发,好在有神器解救~因为懒得跑步,所以人类发明了汽车。因为懒得洗衣服,所以人类发明了洗...
+					        </div>
+					        <div class="autor">
+					        	栏目 <span>海淘情报局</span>
+					        	<img src="" alt="" />
+					        </div>
+				    </div>
+			    </a>
+		    </li>
+		    <li>
+		    	 <a href="xianqingye.html">
+				    <div class="contect">
+					        <div class="header">
+					        	<img src="img/c1.jpg" alt="" />
+					        	<div class="til1">淘局长</div> 
+					        	<div class="til2">海淘界的买手大人,轻松码住第一手时尚海外</div>
+					        </div>
+					        <div class="img">
+					        	<img src="img/c2.jpg" alt="" />
+					        </div>
+					        <div class="title">
+					        	第58期|送给懒癌宝宝的自救生活神器,拿走不谢
+					        </div>
+					        <div class="conn">
+					        	懒癌晚期病发,好在有神器解救~因为懒得跑步,所以人类发明了汽车。因为懒得洗衣服,所以人类发明了洗...
+					        </div>
+					        <div class="autor">
+					        	栏目 <span>海淘情报局</span>
+					        	<img src="" alt="" />
+					        </div>
+				    </div>
+			    </a> 
+		    </li>
+		    <li>
+		    	 <a href="xianqingye.html">
+				    <div class="contect">
+					        <div class="header">
+					        	<img src="img/c1.jpg" alt="" />
+					        	<div class="til1">淘局长</div> 
+					        	<div class="til2">海淘界的买手大人,轻松码住第一手时尚海外</div>
+					        </div>
+					        <div class="img">
+					        	<img src="img/c2.jpg" alt="" />
+					        </div>
+					        <div class="title">
+					        	第58期|送给懒癌宝宝的自救生活神器,拿走不谢
+					        </div>
+					        <div class="conn">
+					        	懒癌晚期病发,好在有神器解救~因为懒得跑步,所以人类发明了汽车。因为懒得洗衣服,所以人类发明了洗...
+					        </div>
+					        <div class="autor">
+					        	栏目 <span>海淘情报局</span>
+					        	<img src="" alt="" />
+					        </div>
+				    </div>
+			    </a> 
+		    </li>
+		     <li>
+		    	 <a href="xianqingye.html">
+				    <div class="contect">
+					        <div class="header">
+					        	<img src="img/c1.jpg" alt="" />
+					        	<div class="til1">淘局长</div> 
+					        	<div class="til2">海淘界的买手大人,轻松码住第一手时尚海外</div>
+					        </div>
+					        <div class="img">
+					        	<img src="img/c2.jpg" alt="" />
+					        </div>
+					        <div class="title">
+					        	第58期|送给懒癌宝宝的自救生活神器,拿走不谢
+					        </div>
+					        <div class="conn">
+					        	懒癌晚期病发,好在有神器解救~因为懒得跑步,所以人类发明了汽车。因为懒得洗衣服,所以人类发明了洗...
+					        </div>
+					        <div class="autor">
+					        	栏目 <span>海淘情报局</span>
+					        	<img src="" alt="" />
+					        </div>
+				    </div>
+			    </a> 
+		    </li>
+		</ul>
+		<div class="down">正在加载......</div>
+	</div>
+</div>
+<div id="footer">
+    <a class="active" href="index.html">
+	      <span class="iconfont icon-shouyeshouye"></span><br />
+	      <span class="label">首页</span>
+	</a>
+	<a href="bangdan.html">
+	      <span class="iconfont icon-crown"></span><br />
+	      <span class="label">榜单</span>
+	</a>
+	<a href="fenlei.html" class="fl">
+	      <span class="iconfont icon-fenlei"></span><br />
+	      <span class="label">分类</span>
+	</a>
+	<a href="login.html">
+	      <span class="iconfont icon-wode"></span><br />
+	      <span class="label">我的</span>
+	</a>
+</div>
+</body>
+<script>
+	//导航栏
+	 var tabsSwiper = new Swiper('.swiper-container1',{
+	 	loop: true,
+	 	freeMode : false,
+	 	preventClicks : false,
+	 	slidesPerView:'auto',
+	 });
+	//轮播图 
+	 var tabsSwiper = new Swiper('.swiper-container2',{
+	 	loop: true,
+	 	pagination : '.swiper-pagination',
+	   	autoplay:2000,
+	 	autoplayDisableOnInteraction : false,
+	 	paginationClickable:true,
+	 	touchMoveStopPropagation:false
+	 });
+</script>	 
+</html>

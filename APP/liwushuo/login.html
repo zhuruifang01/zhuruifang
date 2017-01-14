@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+        <script src="fonts/iconfont.js"></script>
+        <script>	
+	        function resize(originSize,type){
+		        	var type=type||"x"; 
+		        	var widths=document.documentElement.clientWidth;
+		        	var heights=document.documentElement.clientHeight;
+		        	if(type=="x"){
+		        	    var scale=widths/originSize*100+"px";
+		        	}else{
+		        		var scale=heights/originSize*100+"px";
+		        	}
+		        	document.getElementsByTagName("html")[0].style.fontSize=scale;
+		    }
+		    window.onload=function(){
+		        resize(542);
+	        }
+        </script>  
+		<style>
+		      html,body,a{padding:0;margin:0;border:0;text-decoration:none;}
+		      *{box-sizing:border-box;}
+		      .header{
+		      	 width:100%;
+		      	 height:0.77rem;;
+		      	 position:relative;
+		      }
+		      .header .icon-saoyisao{
+		      	 font-size:0.32rem;
+		      	 position:absolute;top:0.2rem;right:1rem;
+		      }
+		      .header .icon-shezhi{
+		      	  font-size:0.45rem;
+		      	  position:absolute;top:0.1rem;right:0.2rem;
+		      }
+		      .touxiang{
+                     text-align:center;
+                     font-size:0.25rem;font-weight:bold;
+			   }
+			  .number,.pass{
+			  	  width:100%;height:0.62rem;
+			  	  position:relative;margin-top:0.4rem;
+			  } 
+			  .number img,.pass img{
+			  	 position:absolute;
+			  	 left:0.5rem;top:0;
+			  }
+			   .number input,.pass input{
+			   	 width:3.76rem;height:100%;
+			  	 position:absolute;
+			  	 left:1.3rem;top:0;
+			  	 padding-left:0.2rem;
+			  	 border:0;
+			  	 border-bottom:0.02rem solid #F0E6E6;
+			  	 color:#958282;font-size:0.23rem;
+			  }
+			  .denglu,.zhuce{
+			  	 width:4.2rem;height:0.54rem;
+			  	 border-radius:0.03rem;
+			  	 background:#DCD2D2;
+			  	 margin-top:0.3rem;
+			  	 margin-left:0.43rem;
+			  	 text-align:center;
+			  	 color:#fff;font-size:0.26rem;line-height:0.54rem;
+			  	 font-weight:bold;
+			  }
+			  .zhuce{background:#FF4258;}
+			  .yzm{
+			  	 height:0.58rem;
+			  	 font-size:0.18rem;color:#FF324B;line-height:0.58rem;
+			  	 margin-left:3.4rem;
+			  }
+			   .more{
+			   	 width:4.6rem;height:1rem;
+			   	 margin:0 auto;
+			   }
+			   .more div{
+			   	  width:1.3rem;
+			   	  height:0.7rem;float:left;
+			   	  border-bottom:0.03rem solid #F3EBEB;
+			   }
+			   .more .wz{
+			   	  width:1.7rem;height:1.4rem;
+			   	  line-height:1.4rem;text-align:center;
+			   }
+			   .ruanjian{
+			   	  width:3.55rem;height:0.5rem;
+			   	  margin:0.3rem auto;
+			   }
+			   .ruanjian a{
+			   	 display:block;
+			   	 width:33.3333%;height:100%;line-height:0.5rem;
+			   	 text-align:center;
+			   	 float:left;font-size:0.5rem;color:#645A5A;
+			   }
+		/*底部*/
+			   #footer{
+			   	  height:0.73rem;
+			   	  background:#fff;
+			   	  position:absolute;
+			   	  left:0;bottom:0;
+			   	  border-top:0.02rem solid #C0C0C0;
+			   }
+			   #footer a{
+			   	 display:block;
+			   	 width:1.35rem;
+			   	 height:100%;
+			   	 float:left;
+			   	 text-align:center;
+			   	 font-size:0.2rem;
+			   	 padding-top:0.1rem;
+			   	 color:#B9AAAA;
+			   }
+			   #footer .fl{
+			   	padding-top:0.15rem;
+			   }
+			   #footer .iconfont{
+			   	 font-size:0.3rem;
+			   	 color:#B9AAAA;
+			   }
+			   #footer .icon-fenlei,.icon-wode{
+			   	 font-size:0.25rem;
+			   }
+			   #footer .active span{
+			     color:#FF4258;  
+			   }
+			  
+        </style>
+	</head>
+	<body>
+		 <div class="header">
+		 	 <a href="" class="iconfont icon-saoyisao"></a>
+		 	 <a href="" class="iconfont icon-shezhi"></a>
+		 </div>
+		 <div class="touxiang">
+		 	<img src="img/touxiang.jpg" alt="" /><br /><br />
+		 	<span>未登录</span>
+		 </div>
+		 <div class="number">
+		 	<img src="img/x0.jpg" alt="" />
+		 	<input type="text" value="输入手机号" />
+		 </div>
+		 <div class="pass">
+		 	<img src="img/x1.jpg" alt="" />
+		 	<input type="password" value="输入密码" />
+		 </div>
+		 <a href=""><div class="denglu">登录</div></a>
+		 <a href=""><div class="zhuce">注册</div></a>
+		 <a href=""><div class="yzm">使用验证码登录</div></a>
+		 <div class="more">
+		 	<div></div>
+		 	<div style="border:0;font-size:0.18rem;color:#968383;" class="wz">使用社交账号登录</div>
+		 	<div></div>
+		 </div>
+		 <div class="ruanjian">
+		 	<a href="" class="iconfont icon-xinlang1" style="line-height:0.6rem;"></a>
+		 	<a href="" class="iconfont icon-weixin"></a>
+		 	<a href="" class="iconfont icon-qq"></a>
+		 </div>
+		 <!--底部-->
+		 <div id="footer">
+			<a href="index.html">
+	             <span class="iconfont icon-shouyeshouye"></span><br />
+	             <span class="label">首页</span>
+	        </a>
+	       <a href="bangdan.html">
+			      <span class="iconfont icon-crown"></span><br />
+			      <span class="label">榜单</span>
+	       </a>
+	       <a href="fenlei.html" class="fl">
+			      <span class="iconfont icon-fenlei"></span><br />
+			      <span class="label">分类</span>
+	       </a>
+	       <a href="login.html" class="active">
+			      <span class="iconfont icon-wode"></span><br />
+			      <span class="label">我的</span>
+		   </a>
+	     </div>
+	</body>
+</html>

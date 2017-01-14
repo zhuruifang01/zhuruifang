@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D正方体</title>
+</head>
+<style>
+ html,body{
+    width:100%;
+    height:100%;
+    background:url(img/bg.jpg);
+    color:white;
+    text-align:center;
+    font-size:28px;
+    line-height:100px;
+ }
+ .scene{  /*场景(父元素)*/
+ 	width:200px;
+ 	height:200px;
+	position:absolute;
+	left:0;right:0;
+	bottom:0;top:0;
+	margin:auto;
+	perspective:800px; /*透视*/
+ }
+ .box{
+ 	width:100%;
+ 	height:100%;
+    position:relative;
+ 	transform-style:preserve-3d;  /*盒子中的子元素全部随父元素动画*/
+ 	/*transition:transform 2s ease;    /*动画方式*/
+ 	transform-origin: center center 100px;  /*盒子整体以中心点为基准动画*/
+ }
+ .box div{
+ 	width:100%;
+ 	height:100%;
+ 	position:absolute;
+ 	left:0;top:0;
+ 	margin:auto;
+    opacity:0.8;
+ }
+
+ /*.box:hover{*/
+ 	/*transform:rotateY(360deg);  */       /*鼠标指向时360度旋转*/
+ 	/*transform:rotate3d(1,0,0,360deg);*/ /*每一个轴 单位向量(有方向,有大小)单位向量的模=1*/
+ /*}*/
+ .box div:nth-child(1){ /*上*/
+ 	background:url(img/a1.png);
+    background-position:center;
+ 	transform-origin:top;   /*基准轴*/
+ 	transform:rotateX(90deg);  /*旋转角度*/
+ }
+ .box div:nth-child(2){  /*左*/
+    background:url(img/a2.png);
+    background-position:center;
+ 	transform-origin:left;
+ 	transform:rotateY(-90deg);
+ }
+ .box div:nth-child(3){   /*后*/
+    background:url(img/a3.png);
+    background-position:center;
+ }
+ .box div:nth-child(4){  /*右*/
+    background:url(img/a4.png);
+    background-position:center;
+ 	transform-origin:right;
+ 	transform:rotateY(90deg);
+ }
+ .box div:nth-child(5){  /*下*/
+    background:url(img/a5.png);
+    background-position:center;
+ 	transform-origin:bottom;
+ 	transform:rotateX(-90deg);
+ }
+ .box div:nth-child(6){  /*前*/
+    background:url(img/a6.png);
+    background-position:center;
+ 	transform:translateZ(200px);
+ }
+</style>
+<script>
+	window.onload=function(){
+
+		// 浏览器宽高
+		 var centerx=document.documentElement.clientWidth/2; 
+		 var centery=document.documentElement.clientHeight/2;
+		 var box=document.getElementsByClassName("box")[0];
+
+         document.onmousedown=function(e){ 
+        // 按下时 坐标
+            var cx=e.clientX;
+            var cy=e.clientY;
+            document.onmousemove=function(e){
+            	// 移动后坐标
+            	var movex=e.clientX;
+                var movey=e.clientY;
+                // 模
+            	var x=movex-centerx;
+            	var y=movey-centery;
+            	var mo=Math.sqrt(x*x+y*y); 
+            	// 单位向量
+            	var mox=x/mo;
+            	var moy=y/mo;
+            	// 角度
+            	var angle=Math.sqrt((movex-cx)*(movex-cx)+(movey-cy)*(movey-cy));
+               box.style.transform="rotate3d("+-moy+","+mox+",0,"+angle+"deg)";
+            }
+            document.onmouseup=function(){
+            	document.onmousemove=null;
+            	document.onmouseup=null;
+            }
+         }
+
+	}
+</script>
+<body>
+    请点击并拖动鼠标
+	<div class="scene">
+		<div class="box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>
